@@ -1,0 +1,17 @@
+graph TD
+    T["..."]:::title
+    A(["branch"]):::invis -->|False| B(["branch"]):::invis
+    A -->|True| C(("...")):::infinite
+    B -->|False| D(("...")):::infinite
+    B -->|True| E(["branch"]):::invis
+    E -->|False| F(("...")):::infinite
+    E -->|True| G(["branch"]):::invis
+    G -->|False| H(("...")):::infinite
+    G -->|True| I{ }
+
+classDef title fill:none,stroke:none,font-weight:bold,font-size:16px;
+    T --> A
+
+classDef infinite fill:#FFF,stroke:#FFF;
+
+classDef invis color:transparent;

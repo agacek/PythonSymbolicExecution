@@ -1,0 +1,13 @@
+graph TD
+    T["remainder(x, y)"]:::title
+    A(["x >= y"]) -->|False| B{ }
+    A -->|True| C(["x >= y"])
+    C -->|False| D{ }
+    C -->|True| E(["x >= y"])
+    E -->|False| F{ }
+    E -->|True| G(("...")):::infinite
+
+classDef title fill:none,stroke:none,font-weight:bold,font-size:16px;
+    T --> A
+
+classDef infinite fill:#FFF,stroke:#FFF

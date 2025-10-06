@@ -48,6 +48,8 @@ def run_all(func, *args):
             actual_choices.clear()
             run(func, *args)
             force_next_choice()
+        print("...")
+
     except StopIteration:
         print("Done")
 

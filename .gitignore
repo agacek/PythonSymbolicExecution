@@ -1,1 +1,3 @@
+diagrams/*.png
 live.py
+.DS_Store

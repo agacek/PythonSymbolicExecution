@@ -1,0 +1,9 @@
+graph TD
+    T["clamp(x, low, high)"]:::title
+    A(["x >= high"]) -->|False| B(["x >= low"])
+    B -->|False| D{ }
+    B -->|True| E{ }
+    A -->|True| C{ }
+
+classDef title fill:none,stroke:none,font-weight:bold,font-size:16px;
+    T --> A
