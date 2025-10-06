@@ -46,6 +46,7 @@ class Linear:
 
 a = Linear({"a": 1})
 b = Linear({"b": 1})
+c = Linear({"c": 1})
 
 
 def run(func, *args):
@@ -68,6 +69,9 @@ def max2(x, y):
         return y
 
 
+run(max2, a, b)
+
+
 def clamp(x, low, high):
     if x >= high:
         return high
@@ -77,8 +81,17 @@ def clamp(x, low, high):
         return low
 
 
-run(max2, a, b)
 run(clamp, a, 5, 10)
+
+
+def max3(x, y, z):
+    if x >= y:
+        return max2(x, z)
+    else:
+        return max2(y, z)
+
+
+run(max3, a, b, c)
 
 
 def remainder(x, y):

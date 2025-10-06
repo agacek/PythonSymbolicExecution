@@ -97,6 +97,7 @@ class Linear:
 
 a = Linear({"a": 1})
 b = Linear({"b": 1})
+c = Linear({"c": 1})
 
 
 def max2(x, y):
@@ -115,6 +116,13 @@ def clamp(x, low, high):
         return low
 
 
+def max3(x, y, z):
+    if x >= y:
+        return max2(x, z)
+    else:
+        return max2(y, z)
+
+
 def remainder(x, y):
     while x >= y:
         x = x - y
@@ -131,5 +139,6 @@ def divide(x, y):
 
 run_all(max2, a, b)
 run_all(clamp, a, 5, 10)
+run_all(max3, a, b, c)
 run_all(remainder, a, b)
 run_all(divide, a, b)
