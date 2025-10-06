@@ -28,6 +28,7 @@ path_conditions = []
 
 
 def run(func, *args):
+    actual_choices.clear()
     path_conditions.clear()
     result = func(*args)
     print("Path conditions:")
@@ -45,7 +46,6 @@ def run_all(func, *args):
 
     try:
         for _ in range(10):
-            actual_choices.clear()
             run(func, *args)
             force_next_choice()
         print("...")
