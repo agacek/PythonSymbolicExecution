@@ -137,8 +137,24 @@ def divide(x, y):
     return q
 
 
+def remainder_rec(x, y):
+    if x >= y:
+        return remainder_rec(x - y, y)
+    else:
+        return x
+
+
+def divide_rec(x, y):
+    if x >= y:
+        return 1 + divide_rec(x - y, y)
+    else:
+        return 0
+
+
 run_all(max2, a, b)
 run_all(clamp, a, 5, 10)
 run_all(max3, a, b, c)
 run_all(remainder, a, b)
 run_all(divide, a, b)
+run_all(remainder_rec, a, b)
+run_all(divide_rec, a, b)
