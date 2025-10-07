@@ -82,7 +82,7 @@ class Sym:
 
 def pitr_enabled(props):
     try:
-        if props["pitrSpec"]["pitrEnabled"]:
+        if props["PointInTimeRecoverySpecification"]["PointInTimeRecoveryEnabled"]:
             return "COMPLIANT"
         else:
             return "NON_COMPLIANT"
