@@ -4,5 +4,5 @@ def f(x, y):
     x = x - y
     return (x, y)
 
-f(123, 456)
 
+f(123, 456)

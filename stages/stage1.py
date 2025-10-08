@@ -6,7 +6,5 @@ def mystery():
     u = w + x - y // 2
     return u - 1
 
+
 mystery()
-
-
-
