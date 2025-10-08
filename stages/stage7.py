@@ -31,12 +31,12 @@ def run(func, *args):
     actual_choices.clear()
     path_conditions.clear()
     result = func(*args)
-    print("Path conditions:")
+    print("  Path conditions:")
     for pc in path_conditions:
-        print(f"  {pc}")
+        print(f"    {pc}")
     print()
-    print("Result:")
-    print(f"  {result}")
+    print("  Result:")
+    print(f"    {result}")
     print()
     print()
 
@@ -45,7 +45,8 @@ def run_all(func, *args):
     forced_choices.clear()
 
     try:
-        for _ in range(10):
+        for i in range(1, 10):
+            print(f"Path {i}:")
             run(func, *args)
             force_next_choice()
         print("...")
